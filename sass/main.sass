@@ -1,0 +1,195 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.h1, .h2, .h3, .h4, .h5, .h6
+	line-height: 1.4
+	text-transform: uppercase
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+@import "media" // Всегда в конце
+
+.center
+	text-align: center
+
+.site-header
+	height: auto
+	width: 100%
+.header-logo
+	img
+		min-width: 125px
+		height: auto	
+.phone
+	position: absolute
+	right: 85px
+	top: 44px
+	font-family: firasans, sans-serif
+	font-size: 22px
+	color: $over
+	white-space: nowrap // на маленьких экрана будет переносится целой строкой
+	a
+		text-decoration: none
+		color: $over
+	.fa
+		margin-right: 10px
+
+//menu start
+.nav
+	ul
+		list-style: none
+		text-align: center
+		padding: 0
+		margin: 20px 0 0
+		
+		li
+			font-family: 'Roboto', sans-serif
+			font-size: 1.2em
+			background-color: #777
+			line-height: 40px
+			height: 40px
+			margin: 0 10px
+			border-bottom: 1px solid #888
+			a
+				text-decoration: none
+				color: #fff
+				display: block
+				transition: .3s background-color
+			&:hover
+				background-color: #005f5f
+				transition: all ease .3s
+			&.active
+				background-color: #fff
+				color: #444
+				cursor: default
+//menu end
+
+//left-sidebar start
+.left-sidebar
+	height: 1000px
+	background-image: url("../img/1.jpg")
+	h3
+		font-size: 30px
+		margin: 0
+		font-family: Roboto
+		color: $over
+	ul, li
+		padding: 0
+		margin: 0
+		list-style-type: none
+		li.active
+			a
+				color: $over
+				&::before
+					color: $over
+		a
+			color: #111
+			font-size: 20px
+			font-weight: bold
+			transition: color .25s ease
+			display: inline-block
+			padding: 4px 0
+			text-decoration: none
+			padding-left: 20px
+			position: relative
+			&:hover, &:focus
+				color: $over
+				&::before
+					color: $over
+			&::before
+				position: absolute
+				font-family: fontawesome
+				content: '\f0ca'
+				left: 0
+				font-size: 12px
+				color: #111
+				transition: color .25s ease
+				top: 6px
+
+.main-section
+	background-color: #999
+	height: 1000px
+	h1
+		margin: 0
+		padding-top: 30px
+	p
+		padding: 30px 60px
+		color: $over
+
+
+//карточки старт
+
+.miniatures
+	border: 2px solid #03B257
+	padding-bottom: 15px
+	padding-top: 5px
+	border-radius: 5px
+	margin-bottom: 20px
+	img
+		width: 100%
+		background-image: url("../img/specials.jpg")
+	h3
+		color: #03B297
+
+	h4
+		color: #9A9AE1
+
+	ul
+		color: #9A9A57
+		
+.main-btn
+	background-color: #00FFA9
+	border: none
+	border-bottom: 3px solid #03B297
+	border-radius: 5px
+	padding: 10px 30px
+
+.main-btn:hover
+	background-color: #5AFFE6
+	border-bottom: 1px solid #03B297
+	margin-top: 2px
+
+.main-btn:focus 
+	outline: none /* убирает рамку вокруг кнопки при нажатии */
+
+
+//карточки конец
+@import "media" // Всегда в конце
